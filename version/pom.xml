@@ -19,22 +19,24 @@
   <groupId>org.onap.oparent</groupId>
   <artifactId>version</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  <name>oparent/version</name>
   <packaging>pom</packaging>
   <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <nexusproxy>https://nexus.onap.org/content</nexusproxy>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <openecomp.nexus.url>https://nexus.onap.org</openecomp.nexus.url>
   </properties>
   <distributionManagement>
     <repository>
       <id>onap-releases</id>
-      <url>${nexusproxy}/repositories/releases</url>
+      <url>${openecomp.nexus.url}/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
       <id>onap-snapshots</id>
-      <url>${nexusproxy}/repositories/snapshots</url>
+      <url>${openecomp.nexus.url}/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
-  <name>oparent/version</name>
 </project>
