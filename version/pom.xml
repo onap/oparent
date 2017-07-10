@@ -31,11 +31,11 @@
   </properties>
   <distributionManagement>
     <repository>
-      <id>onap-releases</id>
+      <id>ecomp-releases</id>
       <url>${onap.nexus.url}/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>onap-snapshots</id>
+      <id>ecomp-snapshots</id>
       <url>${onap.nexus.url}/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
