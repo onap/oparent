@@ -46,7 +46,246 @@
     <sonar.jacoco.itReportPath>target/code-coverage/jacoco-it.exec</sonar.jacoco.itReportPath>
     <!-- Note: This list should match jacoco-maven-plugin's exclusion list below -->
     <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
+    <!-- If following file exist, auto-generation of swagger.json will be done -->
+    <swagger-properties>${basedir}/src/main/resources/swagger.properties</swagger-properties>
+
+    <!-- If following file exist, auto-generation of sdk will be done -->
+    <swagger-json>${basedir}/src/main/resources/swagger.json</swagger-json>
   </properties>
+
+  <profiles>
+        <profile>
+            <id>generate-json</id>
+            <activation>
+                <file>
+                    <exists>${swagger-properties}</exists>
+                </file>
+                <property>
+                    <name>swagger-sdk.generate-json</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>properties-maven-plugin</artifactId>
+                        <version>1.0.0</version>
+                          <executions>
+                              <execution>
+                                <phase>initialize</phase>
+                                <goals>
+                                  <goal>read-project-properties</goal>
+                                </goals>
+                                <configuration>
+                                  <files>
+                                    <file>${basedir}/src/main/resources/swagger.properties</file>
+                                  </files>
+                                </configuration>
+                              </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.github.kongchen</groupId>
+                        <artifactId>swagger-maven-plugin</artifactId>
+                        <version>3.1.4</version>
+                        <configuration>
+                            <apiSources>
+                              <apiSource>
+                                    <locations>${api-rest-package}</locations>
+                                    <schemes>http,https</schemes>
+                                    <host>${api-host-ip}:${api-host-port}</host>
+                                    <basePath>${api-base-path}</basePath>
+                                    <info>
+                                        <title>${api-title}</title>
+                                        <version>${api-version}</version>
+                                        <description>${api-description}</description>
+                                        <license>
+                                            <name>${api-license}</name>
+                                        </license>
+                                    </info>
+                                    <swaggerDirectory>${basedir}/src/main/resources</swaggerDirectory>
+                                </apiSource>
+                            </apiSources>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-install-plugin</artifactId>
+                        <version>2.3.1</version>
+                        <executions>
+                            <execution>
+                                <id>install-file-id</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>install-file</goal>
+                                </goals>
+                                <configuration>
+                                    <file>${basedir}/src/main/resources/swagger.json</file>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}-swagger-schema</artifactId>
+                                    <version>${project.version}</version>
+                                    <packaging>json</packaging>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+              </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>generate-sdk</id>
+            <activation>
+                <file>
+                    <exists>${swagger-json}</exists>
+                </file>
+                <property>
+                    <name>swagger-sdk.generate-java-sdk</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.8</version>
+                        <executions>
+                          <execution>
+                            <phase>initialize</phase>
+                            <id>ant-create-script</id>
+                            <configuration>
+                                <exportAntProperties>true</exportAntProperties>
+                                <tasks>
+
+                                    <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath" />
+                                    <condition property="is_windows" value="true">
+                                                <os family="windows"/>
+                                    </condition>
+                                    <condition property="isLinux" value="true">
+                                            <os family="unix" />
+                                    </condition>
+                                    <if>
+                                      <equals arg1="${is_windows}" arg2="true" />
+                                      <then>
+                                            <property name="swagger.sdk.script.file" value="generated-source-script.bat"/>
+                                            <echo file="${project.build.directory}${file.separator}generated-source-script.bat"
+                                             append="true" message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}" />
+                                            <echo file="${project.build.directory}${file.separator}generated-source-script.bat"
+                                            append="true" message="mvn clean install -Dmaven.test.skip=true${line.separator}" />
+                                      </then>
+                                      <else>
+                                            <property name="swagger.sdk.script.file" value="generated-source-script.sh"/>
+                                              <echo file="${project.build.directory}${file.separator}generated-source-script.sh"
+                                              append="true" message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}" />
+                                            <echo file="${project.build.directory}${file.separator}generated-source-script.sh"
+                                            append="true" message="mvn clean install -Dmaven.test.skip=true${line.separator}" />
+                                            <chmod file="${project.build.directory}${file.separator}generated-source-script.sh" perm="755"/>
+                                      </else>
+                                    </if>
+                                </tasks>
+                            </configuration>
+                            <goals>
+                              <goal>run</goal>
+                            </goals>
+                          </execution>
+                        </executions>
+                        <dependencies>
+                        <dependency>
+                                    <groupId>ant-contrib</groupId>
+                                    <artifactId>ant-contrib</artifactId>
+                                    <version>1.0b3</version>
+                                    <exclusions>
+                                      <exclusion>
+                                        <artifactId>ant</artifactId>
+                                        <groupId>ant</groupId>
+                                      </exclusion>
+                                    </exclusions>
+                                  </dependency>
+                        </dependencies>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-codegen-maven-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <configuration>
+                                    <inputSpec>${basedir}/src/main/resources/swagger.json</inputSpec>
+                                    <output>${project.build.directory}/generated-sources</output>
+                                    <language>java</language>
+                                    <configOptions>
+                                       <dateLibrary>joda</dateLibrary>
+                                    </configOptions>
+                                    <library>jersey2</library>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>${project.artifactId}-java-sdk</artifactId>
+                                    <artifactVersion>${project.version}</artifactVersion>
+                                    <modelPackage>${project.groupId}.${project.artifactId}.client.model</modelPackage>
+                                    <apiPackage>${project.groupId}.${project.artifactId}.client.api</apiPackage>
+                                    <invokerPackage>${project.groupId}.${project.artifactId}.client.invoker</invokerPackage>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                      <artifactId>exec-maven-plugin</artifactId>
+                      <groupId>org.codehaus.mojo</groupId>
+                      <version>1.5.0</version>
+                      <executions>
+                        <execution>
+                          <id>swagger-generate-sources</id>
+                          <phase>generate-sources</phase>
+                          <goals>
+                            <goal>exec</goal>
+                          </goals>
+                          <configuration>
+                            <executable>${project.build.directory}${file.separator}${swagger.sdk.script.file}</executable>
+                          </configuration>
+                        </execution>
+                      </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-clean-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>clean-generated-files</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>clean</goal>
+                                </goals>
+                                <configuration>
+                                    <filesets>
+                                        <fileset>
+                                            <directory>${project.build.directory}/generated-sources</directory>
+                                        </fileset>
+                                    </filesets>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+              </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>org.onap.msb.swagger-sdk</groupId>
+                    <artifactId>swagger-sdk</artifactId>
+                    <version>1.0.0-SNAPSHOT</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
   <build>
     <pluginManagement>
       <plugins>
@@ -66,7 +305,7 @@
             </dependency>
           </dependencies>
           <configuration>
-            <!-- Use Google Java Style Guide: 
+            <!-- Use Google Java Style Guide:
                 https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
                 with minor changes -->
             <configLocation>onap-java-style.xml</configLocation>
@@ -116,7 +355,7 @@
           <version>${jacoco.version}</version>
           <configuration>
             <!-- Note: This exclusion list should match <sonar.exclusions>
-		 property above -->
+         property above -->
             <excludes>
               <exclude>**/gen/**</exclude>
               <exclude>**/generated-sources/**</exclude>
@@ -126,9 +365,9 @@
           </configuration>
           <executions>
             <!--
-		Prepares the property pointing to the JaCoCo runtime agent which
-		is passed as VM argument when Maven the Surefire plugin is executed.
-	    -->
+        Prepares the property pointing to the JaCoCo runtime agent which
+        is passed as VM argument when Maven the Surefire plugin is executed.
+        -->
             <execution>
               <id>pre-unit-test</id>
               <goals>
@@ -138,16 +377,16 @@
                 <!-- Sets the path to the file which contains the execution data. -->
                 <destFile>${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
                 <!--
-		    Sets the name of the property containing the settings
-		    for JaCoCo runtime agent.
-		-->
+            Sets the name of the property containing the settings
+            for JaCoCo runtime agent.
+        -->
                 <propertyName>surefireArgLine</propertyName>
               </configuration>
             </execution>
             <!--
-		Ensures that the code coverage report for unit tests is created after
-		unit tests have been run.
-	    -->
+        Ensures that the code coverage report for unit tests is created after
+        unit tests have been run.
+        -->
             <execution>
               <id>post-unit-test</id>
               <phase>test</phase>
@@ -171,16 +410,16 @@
                 <!-- Sets the path to the file which contains the execution data. -->
                 <destFile>${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
                 <!--
-		    Sets the name of the property containing the settings
-		    for JaCoCo runtime agent.
-		-->
+            Sets the name of the property containing the settings
+            for JaCoCo runtime agent.
+        -->
                 <propertyName>failsafeArgLine</propertyName>
               </configuration>
             </execution>
             <!--
-		Ensures that the code coverage report for integration tests after
-		integration tests have been run.
-	    -->
+        Ensures that the code coverage report for integration tests after
+        integration tests have been run.
+        -->
             <execution>
               <id>post-integration-test</id>
               <phase>post-integration-test</phase>
@@ -215,9 +454,9 @@
           <version>2.19.1</version>
           <executions>
             <!--
-		Ensures that both integration-test and verify goals of the Failsafe Maven
-		plugin are executed.
-	    -->
+        Ensures that both integration-test and verify goals of the Failsafe Maven
+        plugin are executed.
+        -->
             <execution>
               <id>integration-tests</id>
               <goals>
@@ -231,12 +470,12 @@
             </execution>
           </executions>
         </plugin>
-	<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-	<plugin>
-	  <groupId>org.sonarsource.scanner.maven</groupId>
-	  <artifactId>sonar-maven-plugin</artifactId>
-	  <version>3.3.0.603</version>
-	</plugin>
+    <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+    <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.3.0.603</version>
+    </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
