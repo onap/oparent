@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
    Copyright (c) 2016-2017 Huawei Technologies Co., Ltd.
+   Modifications copyright (C) 2017 AT&T Intellectual Property
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -81,6 +82,23 @@
             </dependency>
           </dependencies>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>2.4</version>
+          <executions>
+            <execution>
+              <id>check-dependencies-version</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>display-dependency-updates</goal>
+              </goals>
+              <configuration>
+                <rulesUri>https://git.onap.org/oparent/plain/oparent/versions/src/main/resources/onap-versions/ruleset.xml</rulesUri>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -95,6 +113,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
