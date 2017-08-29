@@ -476,7 +476,7 @@
                 <goal>version-check</goal>
               </goals>
               <configuration>
-                <manifestUri>https://git.onap.org/oparent/plain/versions/src/main/resources/onap-versions/onap-version-manifest.csv</manifestUri>
+                <manifestUri>https://git.onap.org/integration/plain/versions/java-manifest.csv</manifestUri>
               </configuration>
             </execution>
           </executions>
