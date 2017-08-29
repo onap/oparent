@@ -115,7 +115,7 @@
                 <goal>display-dependency-updates</goal>
               </goals>
               <configuration>
-                <!--<rulesUri>https://git.onap.org/oparent/plain/oparent/versions/src/main/resources/onap-versions/ruleset.xml</rulesUri>-->
+                <rulesUri>https://git.onap.org/oparent/plain/versions/src/main/resources/onap-versions/ruleset.xml</rulesUri>
               </configuration>
             </execution>
           </executions>
