@@ -35,7 +35,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
-    <versions.plugin.phase>none</versions.plugin.phase>
     <!-- sitePath may be overridden in the inheriting POM if desired -->
     <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
   </properties>
@@ -108,23 +107,6 @@
             </execution>
           </executions>
         </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>versions-maven-plugin</artifactId>
-          <version>2.4</version>
-          <executions>
-            <execution>
-              <id>check-dependencies-version</id>
-              <phase>${versions.plugin.phase}</phase>
-              <goals>
-                <goal>display-dependency-updates</goal>
-              </goals>
-              <configuration>
-                <rulesUri>https://git.onap.org/oparent/plain/versions/src/main/resources/onap-versions/ruleset.xml</rulesUri>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -143,10 +125,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
