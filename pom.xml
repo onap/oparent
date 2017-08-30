@@ -99,6 +99,9 @@
                   <requireReleaseDeps>
                     <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
                     <onlyWhenRelease>true</onlyWhenRelease>
+                    <excludes>
+                      <exclude>org.onap.oparent.*</exclude>
+                    </excludes>
                   </requireReleaseDeps>
                 </rules>
               </configuration>
