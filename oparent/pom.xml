@@ -45,6 +45,34 @@
     <!-- If following file exist, auto-generation of sdk will be done -->
     <swagger-json>${basedir}/src/main/resources/swagger.json</swagger-json>
   </properties>
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven 2 repository 2</name>
+      <url>http://repo2.maven.org/maven2/</url>
+    </repository>
+    <repository>
+      <id>ecomp-releases</id>
+      <name>ONAP Release Repository</name>
+      <url>https://nexus.onap.org/content/repositories/releases/</url>
+    </repository>
+    <repository>
+      <id>ecomp-staging</id>
+      <name>ONAP Staging Repository</name>
+      <url>https://nexus.onap.org/content/repositories/staging/</url>
+    </repository>
+    <repository>
+      <id>ecomp-snapshots</id>
+      <name>ONAP Snapshot Repository</name>
+      <url>https://nexus.onap.org/content/repositories/snapshots/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
   <profiles>
     <profile>
       <id>generate-json</id>
