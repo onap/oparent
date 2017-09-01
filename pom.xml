@@ -27,7 +27,6 @@
     <module>checkstyle</module>
     <module>license</module>
     <module>oparent</module>
-    <module>version-check-maven-plugin</module>
   </modules>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
