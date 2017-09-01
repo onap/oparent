@@ -37,6 +37,15 @@
     <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
     <!-- sitePath may be overridden in the inheriting POM if desired -->
     <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
+    <!-- properties for Nexus raw repo -->
+    <onap.nexus.rawrepo.baseurl.upload>https://nexus.onap.org/content/sites/raw</onap.nexus.rawrepo.baseurl.upload>
+    <onap.nexus.rawrepo.baseurl.download>
+      https://nexus.onap.org/service/local/repositories/raw/content
+    </onap.nexus.rawrepo.baseurl.download>
+    <onap.nexus.rawrepo.serverid>ecomp-raw</onap.nexus.rawrepo.serverid>
+    <!-- properties for Nexus Docker registry -->
+    <onap.nexus.dockerregistry.daily>nexus3.onap.org:10003</onap.nexus.dockerregistry.daily>
+    <onap.nexus.dockerregistry.release>nexus3.onap.org:10002</onap.nexus.dockerregistry.release>
   </properties>
   <distributionManagement>
     <repository>
