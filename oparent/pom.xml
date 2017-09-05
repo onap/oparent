@@ -318,15 +318,14 @@
               <phase>process-sources</phase>
               <configuration>
                 <configLocation>onap-checkstyle/check-license.xml</configLocation>
-                <headerLocation>onap-checkstyle/apache-license-2.regexp.txt</headerLocation>
                 <includeResources>false</includeResources>
                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
                 <includeTestResources>false</includeTestResources>
                 <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
                 <excludes>
                 </excludes>
-                <failsOnError>false</failsOnError>
                 <consoleOutput>true</consoleOutput>
+                <failsOnViolation>false</failsOnViolation>
               </configuration>
             </execution>
             <execution>
@@ -346,9 +345,9 @@
                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
                 <includeTestResources>true</includeTestResources>
                 <excludes>
-		</excludes>
-                <failsOnError>false</failsOnError>
+                </excludes>
                 <consoleOutput>true</consoleOutput>
+                <failsOnViolation>false</failsOnViolation>
               </configuration>
             </execution>
           </executions>
