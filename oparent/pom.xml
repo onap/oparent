@@ -68,6 +68,19 @@
       </releases>
     </repository>
   </repositories>
+  <dependencies>
+    <dependency>
+      <!-- Needed to download the checkstyle artifact
+           using the repository section of this pom.
+           The checkstyle plugin below use it as dependency,
+           but maven does not want to use the repositories
+           to download the plugin dependency.
+      -->
+      <groupId>org.onap.oparent</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
   <profiles>
     <profile>
       <id>generate-json</id>
