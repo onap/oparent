@@ -68,19 +68,24 @@
       </releases>
     </repository>
   </repositories>
-  <dependencies>
-    <dependency>
-      <!-- Needed to download the checkstyle artifact
-           using the repository section of this pom.
-           The checkstyle plugin below use it as dependency,
-           but maven does not want to use the repositories
-           to download the plugin dependency.
-      -->
-      <groupId>org.onap.oparent</groupId>
-      <artifactId>checkstyle</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>ecomp-releases</id>
+      <name>ONAP Release Repository</name>
+      <url>https://nexus.onap.org/content/repositories/releases/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>ecomp-snapshots</id>
+      <name>ONAP Snapshot Repository</name>
+      <url>https://nexus.onap.org/content/repositories/snapshots/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
   <profiles>
     <profile>
       <id>generate-json</id>
