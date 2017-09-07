@@ -68,19 +68,29 @@
       </releases>
     </repository>
   </repositories>
-  <dependencies>
-    <dependency>
-      <!-- Needed to download the checkstyle artifact
-           using the repository section of this pom.
-           The checkstyle plugin below use it as dependency,
-           but maven does not want to use the repositories
-           to download the plugin dependency.
-      -->
-      <groupId>org.onap.oparent</groupId>
-      <artifactId>checkstyle</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <name>Maven 2 repository 2</name>
+      <url>http://repo2.maven.org/maven2/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>ecomp-releases</id>
+      <name>ONAP Release Repository</name>
+      <url>https://nexus.onap.org/content/repositories/releases/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>ecomp-snapshots</id>
+      <name>ONAP Snapshot Repository</name>
+      <url>https://nexus.onap.org/content/repositories/snapshots/</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
   <profiles>
     <profile>
       <id>generate-json</id>
@@ -313,59 +323,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.17</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.onap.oparent</groupId>
-              <artifactId>checkstyle</artifactId>
-              <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <id>check-license</id>
-              <goals>
-                <goal>check</goal>
-              </goals>
-              <phase>process-sources</phase>
-              <configuration>
-                <configLocation>onap-checkstyle/check-license.xml</configLocation>
-                <includeResources>false</includeResources>
-                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                <includeTestResources>false</includeTestResources>
-                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                <excludes>
-                </excludes>
-                <consoleOutput>true</consoleOutput>
-                <failsOnViolation>false</failsOnViolation>
-              </configuration>
-            </execution>
-            <execution>
-              <id>check-style</id>
-              <goals>
-                <goal>check</goal>
-              </goals>
-              <phase>process-sources</phase>
-              <configuration>
-                <!-- Use Google Java Style Guide:
-                     https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
-                     with minor changes -->
-                <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
-                <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
-                <includeResources>true</includeResources>
-                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                <includeTestResources>true</includeTestResources>
-                <excludes>
-                </excludes>
-                <consoleOutput>true</consoleOutput>
-                <failsOnViolation>false</failsOnViolation>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${jacoco.version}</version>
@@ -497,6 +454,56 @@
     <plugins>
       <plugin>
         <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.17</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.onap.oparent</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>onap-license</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <configLocation>onap-checkstyle/check-license.xml</configLocation>
+              <includeResources>false</includeResources>
+              <includeTestSourceDirectory>true</includeTestSourceDirectory>
+              <includeTestResources>false</includeTestResources>
+              <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+              <excludes>
+              </excludes>
+              <consoleOutput>true</consoleOutput>
+              <failsOnViolation>false</failsOnViolation>
+            </configuration>
+          </execution>
+          <execution>
+            <id>onap-java-style</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <!-- Use Google Java Style Guide:
+                   https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
+                   with minor changes -->
+              <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
+              <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
+              <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+              <includeResources>true</includeResources>
+              <includeTestSourceDirectory>true</includeTestSourceDirectory>
+              <includeTestResources>true</includeTestResources>
+              <excludes>
+              </excludes>
+              <consoleOutput>true</consoleOutput>
+              <failsOnViolation>false</failsOnViolation>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
