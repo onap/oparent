@@ -27,6 +27,7 @@
     <module>checkstyle</module>
     <module>license</module>
     <module>oparent</module>
+    <module>oparent-python</module>
   </modules>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
