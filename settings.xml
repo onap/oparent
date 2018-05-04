@@ -168,7 +168,7 @@
 
   <activeProfiles>
     <activeProfile>onap-snapshots</activeProfile>
-    <activeProfile>onap-staging</activeProfile>
+    <!-- <activeProfile>onap-staging</activeProfile> -->
     <activeProfile>onap-releases</activeProfile>
     <activeProfile>onap-public</activeProfile>
     <!-- <activeProfile>local-public</activeProfile> -->
