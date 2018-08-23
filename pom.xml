@@ -28,6 +28,8 @@
     <module>license</module>
     <module>oparent</module>
     <module>oparent-python</module>
+    <module>dependencies</module>
+    <module>dependencies-clm</module>
   </modules>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
