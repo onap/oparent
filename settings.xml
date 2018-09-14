@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   Copyright (c) 2016 Huawei Technologies Co., Ltd. and others.  All rights reserved.
+   Copyright (c) 2016-2018 Huawei Technologies Co., Ltd. and others.  All rights reserved.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -19,6 +19,21 @@
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
   <profiles>
+    <profile>
+      <id>onap-settings</id>
+      <properties>
+        <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
+        <onap.nexus.rawrepo.baseurl.upload>https://nexus.onap.org/content/sites/raw</onap.nexus.rawrepo.baseurl.upload>
+        <onap.nexus.rawrepo.baseurl.download>https://nexus.onap.org/service/local/repositories/raw/content</onap.nexus.rawrepo.baseurl.download>
+        <onap.nexus.rawrepo.serverid>ecomp-raw</onap.nexus.rawrepo.serverid>
+
+        <!-- properties for Nexus Docker registry -->
+        <onap.nexus.dockerregistry.daily>nexus3.onap.org:10003</onap.nexus.dockerregistry.daily>
+        <onap.nexus.dockerregistry.release>nexus3.onap.org:10002</onap.nexus.dockerregistry.release>
+        <docker.pull.registry>nexus3.onap.org:10001</docker.pull.registry>
+        <docker.push.registry>nexus3.onap.org:10003</docker.push.registry>
+      </properties>
+    </profile>
     <profile>
       <id>onap-snapshots</id>
       <repositories>
@@ -44,35 +59,6 @@
           </releases>
           <snapshots>
             <enabled>true</enabled>
-          </snapshots>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
-    <profile>
-      <id>onap-staging</id>
-      <repositories>
-        <repository>
-          <id>onap-staging</id>
-          <name>onap-staging</name>
-          <url>https://nexus.onap.org/content/repositories/staging/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>onap-staging</id>
-          <name>onap-staging</name>
-          <url>https://nexus.onap.org/content/repositories/staging/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
       </pluginRepositories>
@@ -110,6 +96,10 @@
       <id>onap-public</id>
       <repositories>
         <repository>
+          <id>central</id>
+          <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
           <id>onap-public</id>
           <name>onap-public</name>
           <url>https://nexus.onap.org/content/repositories/public/</url>
@@ -122,6 +112,10 @@
         </repository>
       </repositories>
       <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://repo1.maven.org/maven2/</url>
+        </pluginRepository>
         <pluginRepository>
           <id>onap-public</id>
           <name>onap-public</name>
@@ -136,6 +130,7 @@
       </pluginRepositories>
     </profile>
     <profile>
+      <!-- Configure this profile if you have a local nexus cache -->
       <id>local-public</id>
       <repositories>
         <repository>
@@ -167,8 +162,8 @@
   </profiles>
 
   <activeProfiles>
+    <activeProfile>onap-settings</activeProfile>
     <activeProfile>onap-snapshots</activeProfile>
-    <!-- <activeProfile>onap-staging</activeProfile> -->
     <activeProfile>onap-releases</activeProfile>
     <activeProfile>onap-public</activeProfile>
     <!-- <activeProfile>local-public</activeProfile> -->

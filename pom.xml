@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   Copyright (c) 2016-2017 Huawei Technologies Co., Ltd.
+   Copyright (c) 2016-2018 Huawei Technologies Co., Ltd.
    Modifications copyright (C) 2017 AT&T Intellectual Property
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,18 +36,22 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
     <!-- sitePath may be overridden in the inheriting POM if desired -->
     <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
-    <!-- properties for Nexus raw repo -->
+
+    <!--
+        The following properties should be defined in your own ~/.m2/settings.xml based on your own build infastructure setup.
+        See the settings.xml in this directory for default settings based on the Linux Foundation ONAP infrastructure.
+
+    <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
     <onap.nexus.rawrepo.baseurl.upload>https://nexus.onap.org/content/sites/raw</onap.nexus.rawrepo.baseurl.upload>
-    <onap.nexus.rawrepo.baseurl.download>
-      https://nexus.onap.org/service/local/repositories/raw/content
-    </onap.nexus.rawrepo.baseurl.download>
+    <onap.nexus.rawrepo.baseurl.download>https://nexus.onap.org/service/local/repositories/raw/content</onap.nexus.rawrepo.baseurl.download>
     <onap.nexus.rawrepo.serverid>ecomp-raw</onap.nexus.rawrepo.serverid>
-    <!-- properties for Nexus Docker registry -->
     <onap.nexus.dockerregistry.daily>nexus3.onap.org:10003</onap.nexus.dockerregistry.daily>
     <onap.nexus.dockerregistry.release>nexus3.onap.org:10002</onap.nexus.dockerregistry.release>
+    <docker.pull.registry>nexus3.onap.org:10001</docker.pull.registry>
+    <docker.push.registry>nexus3.onap.org:10003</docker.push.registry>
+    -->
   </properties>
   <distributionManagement>
     <repository>
@@ -97,8 +101,23 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M1</version>
+          <version>3.0.0-M2</version>
           <executions>
+            <execution>
+              <id>enforce-property</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireProperty>
+                    <property>onap.nexus.url</property>
+                    <message>You must set a onap.nexus.url property in your ~/.m2/settings.xml.  See oparent/settings.xml for an example.</message>
+                  </requireProperty>
+                </rules>
+                <fail>true</fail>
+              </configuration>
+            </execution>
             <execution>
               <id>enforce-no-snapshots</id>
               <goals>
@@ -142,5 +161,6 @@
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
     </plugins>
+
   </build>
 </project>
