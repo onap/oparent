@@ -26,29 +26,29 @@
   <name>oparent/dependencies</name>
   <packaging>pom</packaging>
   <properties>
-    <spring.version>5.1.2.RELEASE</spring.version>         
+    <spring.version>5.1.2.RELEASE</spring.version>
   </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>26.0-jre</version>
+        <version>27.0-jre</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-http</artifactId>
-        <version>9.4.12.v20180830</version>
+        <version>9.4.14.v20181114</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlet</artifactId>
-        <version>9.4.12.v20180830</version>
+        <version>9.4.14.v20181114</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-server</artifactId>
-        <version>9.4.12.v20180830</version>
+        <version>9.4.14.v20181114</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
@@ -78,7 +78,7 @@
       <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
         <artifactId>tomcat-embed-core</artifactId>
-        <version>9.0.12</version>
+        <version>9.0.14</version>
       </dependency>
       <dependency>
         <groupId>org.codehaus.jackson</groupId>
@@ -88,12 +88,12 @@
       <dependency>
         <groupId>org.webjars</groupId>
         <artifactId>bootstrap</artifactId>
-        <version>4.1.2</version>
+        <version>4.2.1</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.9.6</version>
+        <version>2.9.8</version>
       </dependency>
       <dependency>
         <groupId>org.webjars</groupId>
@@ -108,7 +108,7 @@
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
-        <version>4.5.6</version>
+        <version>4.5.7</version>
       </dependency>
       <dependency>
         <groupId>xerces</groupId>
