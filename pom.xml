@@ -20,7 +20,7 @@
   <name>oparent</name>
   <groupId>org.onap.oparent</groupId>
   <artifactId>version</artifactId>
-  <version>1.2.3-SNAPSHOT</version>
+  <version>1.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <!-- oparent tools -->
