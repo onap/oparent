@@ -27,6 +27,7 @@
   <packaging>pom</packaging>
   <properties>
     <spring.version>5.1.2.RELEASE</spring.version>
+    <jetty.version>9.4.20.v20190813</jetty.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -38,17 +39,17 @@
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-http</artifactId>
-        <version>9.4.14.v20181114</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlet</artifactId>
-        <version>9.4.14.v20181114</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-server</artifactId>
-        <version>9.4.14.v20181114</version>
+        <version>${jetty.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
