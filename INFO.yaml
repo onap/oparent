@@ -35,7 +35,7 @@ committers:
       email: 'cc697w@intl.att.com'
       company: 'ATT'
       id: 'ChrisC'
-      timezone: 'Belgium/Namur'
+      timezone: 'Europe/Brussels'
     - name: 'Marco Platania'
       email: 'platania@research.att.com'
       company: 'ATT'
@@ -50,7 +50,7 @@ committers:
       email: 'morgan.richomme@orange.com'
       company: 'Orange'
       id: 'umry8364'
-      timezone: 'Paris/France'
+      timezone: 'Europe/Paris'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
     changes:
