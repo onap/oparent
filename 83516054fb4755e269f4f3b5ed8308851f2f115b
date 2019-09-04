@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4718761_e5d1f25b",
+        "filename": "INFO.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-09-04T17:56:11Z",
+      "side": 1,
+      "message": "Please amend this (and all references to it) to \"onap_oparent_ptl\".",
+      "range": {
+        "startLine": 6,
+        "startChar": 15,
+        "endLine": 6,
+        "endChar": 30
+      },
+      "revId": "83516054fb4755e269f4f3b5ed8308851f2f115b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
