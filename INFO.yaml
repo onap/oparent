@@ -3,13 +3,13 @@ project: 'oparent'
 project_creation_date: '2017-02-10'
 lifecycle_state: 'Incubation'
 project_category: ''
-project_lead: &onap_releng_ptl
+project_lead: &onap_oparent_ptl
     name: 'Yang Xu'
     email: 'yang.xu3@huawei.com'
     id: 'xuyang11'
     company: 'Huawei'
     timezone: 'America/New_York'
-primary_contact: *onap_releng_ptl
+primary_contact: *onap_oparent_ptl
 issue_tracking:
     type: 'jira'
     url: 'https://jira.onap.org/projects/INT'
@@ -30,7 +30,7 @@ meetings:
 repositories:
     - 'oparent'
 committers:
-    - <<: *onap_releng_ptl
+    - <<: *onap_oparent_ptl
     - name: 'Christophe Closset'
       email: 'cc697w@intl.att.com'
       company: 'ATT'
@@ -49,7 +49,7 @@ committers:
     - name: 'Morgan Richomme'
       email: 'morgan.richomme@orange.com'
       company: 'Orange'
-      id: 'umry8364'
+      id: 'mrichomme'
       timezone: 'Europe/Paris'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
