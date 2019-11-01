@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9f9fddf_2d2d904a",
+        "filename": "checkstyle/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-11-01T13:51:57Z",
+      "side": 1,
+      "message": "Probably should update the license headers:\n\nModifications Copyright (C) 2019 AT\u0026T Intellectual Property.",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 4,
+        "endChar": 0
+      },
+      "revId": "0b4a849e8e3be6aac27ca24629ccbc26ed9ad743",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
