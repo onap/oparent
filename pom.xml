@@ -32,13 +32,11 @@
     <module>dependencies-clm</module>
   </modules>
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <!-- sitePath may be overridden in the inheriting POM if desired -->
     <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
-
+    <maven.compiler.release>11</maven.compiler.release>
     <!--
         The following properties should be defined in your own ~/.m2/settings.xml based on your own build infastructure setup.
         See the settings.xml in this directory for default settings based on the Linux Foundation ONAP infrastructure.
@@ -66,6 +64,22 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version>
+            <configuration>
+               <release>${maven.compiler.release}</release>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>versions-maven-plugin</artifactId>
+            <version>2.5</version>
+            <configuration>
+               <generateBackupPoms>false</generateBackupPoms>
+            </configuration>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
@@ -146,6 +160,5 @@
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
     </plugins>
-
   </build>
 </project>
