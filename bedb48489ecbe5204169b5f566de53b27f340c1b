@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a813f288_cbd02fd3",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-11-08T12:52:56Z",
+      "side": 0,
+      "message": "I think though these may want to be set - projects that inherit may have plugins that need this. Unless the plugin you added does set these variables.",
+      "range": {
+        "startLine": 35,
+        "startChar": 1,
+        "endLine": 36,
+        "endChar": 54
+      },
+      "revId": "bedb48489ecbe5204169b5f566de53b27f340c1b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
