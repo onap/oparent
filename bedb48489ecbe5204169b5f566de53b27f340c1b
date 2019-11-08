@@ -22,6 +22,30 @@
       "revId": "bedb48489ecbe5204169b5f566de53b27f340c1b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b19c1655_0815dd58",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-11-08T14:10:52Z",
+      "side": 0,
+      "message": "the format changed in 3.8 - these are the java 8 settings as best I can tell. the new setting is simply a release version.",
+      "parentUuid": "a813f288_cbd02fd3",
+      "range": {
+        "startLine": 35,
+        "startChar": 1,
+        "endLine": 36,
+        "endChar": 54
+      },
+      "revId": "bedb48489ecbe5204169b5f566de53b27f340c1b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
