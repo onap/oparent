@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6103d68_a65413fa",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-11-21T18:29:21Z",
+      "side": 1,
+      "message": "Not sure if this is the right goal - previously what is defined is \u0027prepare-agent\u0027 and \u0027report\u0027.\n\nAlso, BTW these plugins are defined in the integration/pom.xml file. \n\nWhich is why its missing from this root pom. Maybe the other should be removed?\n\nKind of guessing right now Jessica",
+      "range": {
+        "startLine": 87,
+        "startChar": 26,
+        "endLine": 87,
+        "endChar": 31
+      },
+      "revId": "bde4e4840f21b2be818b85ad181d47a3e4e6189c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
