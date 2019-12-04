@@ -16,6 +16,24 @@
       "revId": "25ff29cb3f1fec188458b009fa4bc0541bfb6f98",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63ec203f_fcca6642",
+        "filename": "checkstyle/src/main/resources/onap-checkstyle/onap-java-style.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2019-12-04T21:26:28Z",
+      "side": 1,
+      "message": "In the LineLength module Jim?",
+      "parentUuid": "ef825442_20092a0e",
+      "revId": "25ff29cb3f1fec188458b009fa4bc0541bfb6f98",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
