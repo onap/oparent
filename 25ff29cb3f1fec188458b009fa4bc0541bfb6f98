@@ -34,6 +34,24 @@
       "revId": "25ff29cb3f1fec188458b009fa4bc0541bfb6f98",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "960b3b62_3e2c060f",
+        "filename": "checkstyle/src/main/resources/onap-checkstyle/onap-java-style.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2019-12-04T21:47:32Z",
+      "side": 1,
+      "message": "yes, it\u0027s in the LineLength module - appears in google\u0027s checkstyle.  Might explain why we started seeing complaints in the xml files.",
+      "parentUuid": "63ec203f_fcca6642",
+      "revId": "25ff29cb3f1fec188458b009fa4bc0541bfb6f98",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
