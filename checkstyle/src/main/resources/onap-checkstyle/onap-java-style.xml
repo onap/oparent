@@ -203,6 +203,15 @@
             <property name="allowedAnnotations" value="Override, Test"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
         </module>
+<<<<<<< HEAD   (3adfb4 Add aggragate coverage support)
+=======
+        <module name="MissingJavadocMethod">
+            <property name="scope" value="public"/>
+            <property name="minLineCount" value="2"/>
+            <property name="allowMissingPropertyJavadoc" value="true"/>
+            <property name="ignoreMethodNamesRegex" value="^(test|before|after)[a-zA-Z0-9_]*$"/>
+        </module>
+>>>>>>> CHANGE (b08042 Update checkstyle rules to exclude methods)
         <module name="MethodName">
             <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
             <message key="name.invalidPattern"
