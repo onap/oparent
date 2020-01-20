@@ -16,6 +16,24 @@
       "revId": "dde95949b1050c276c2b7366bd1716eb8c9d3912",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e20f89d6_358df7dd",
+        "filename": "settings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-01-20T18:26:12Z",
+      "side": 1,
+      "message": "We have been following this practice in policy, it was written somewhere more clearly in ONAP but seems to have disappeared. Keeping the license up-to-date and noting which company made the changes. If you don\u0027t enforce it in your repos, I can remove it.",
+      "parentUuid": "dc477272_4d516cda",
+      "revId": "dde95949b1050c276c2b7366bd1716eb8c9d3912",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
