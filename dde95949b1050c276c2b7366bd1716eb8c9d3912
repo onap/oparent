@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dc477272_4d516cda",
+        "filename": "settings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-01-20T16:42:46Z",
+      "side": 1,
+      "message": "I am not sure the copyright and the All rights reserved mentions are needed here...\nthe contributions are under LF CLA (for the license) on one hand and contributors are already identified with the git history",
+      "revId": "dde95949b1050c276c2b7366bd1716eb8c9d3912",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
