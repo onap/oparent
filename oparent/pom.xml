@@ -451,7 +451,9 @@
               <includeResources>false</includeResources>
               <includeTestSourceDirectory>true</includeTestSourceDirectory>
               <includeTestResources>false</includeTestResources>
-              <sourceDirectories>${project.build.sourceDirectory}</sourceDirectories>
+              <sourceDirectories>
+                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+              </sourceDirectories>
               <excludes>
               </excludes>
               <consoleOutput>true</consoleOutput>
@@ -470,7 +472,9 @@
                    with minor changes -->
               <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
               <!-- <sourceDirectories> is needed so that checkstyle ignores the generated sources directory -->
-              <sourceDirectories>${project.build.sourceDirectory}</sourceDirectories>
+              <sourceDirectories>
+                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+              </sourceDirectories>
               <includeResources>true</includeResources>
               <includeTestSourceDirectory>true</includeTestSourceDirectory>
               <includeTestResources>true</includeTestResources>
