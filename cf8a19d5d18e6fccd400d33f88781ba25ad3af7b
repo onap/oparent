@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d28e7b0d_32015c92",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-03-09T16:05:57Z",
+      "side": 1,
+      "message": "If this works John, I think its ok. For Policy we just have this entry:\n\u003csourceDirectories\u003e${project.build.sourceDirectory}\u003c/sourceDirectories\u003e",
+      "range": {
+        "startLine": 454,
+        "startChar": 14,
+        "endLine": 456,
+        "endChar": 33
+      },
+      "revId": "cf8a19d5d18e6fccd400d33f88781ba25ad3af7b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
