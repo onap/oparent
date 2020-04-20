@@ -4,11 +4,11 @@ project_creation_date: '2017-02-10'
 lifecycle_state: 'Incubation'
 project_category: ''
 project_lead: &onap_oparent_ptl
-    name: 'Yang Xu'
-    email: 'yang.xu3@huawei.com'
-    id: 'xuyang11'
-    company: 'Huawei'
-    timezone: 'America/New_York'
+    name: 'Morgan Richomme'
+    email: 'morgan.richomme@orange.com'
+    id: 'mrichomme'
+    company: 'Orange'
+    timezone: 'Europe/Paris'
 primary_contact: *onap_oparent_ptl
 issue_tracking:
     type: 'jira'
@@ -51,6 +51,11 @@ committers:
       company: 'Orange'
       id: 'mrichomme'
       timezone: 'Europe/Paris'
+    - name: 'Pamela Dragosh'
+      email: 'pdragosh@research.att.com'
+      company: 'ATT'
+      id: 'pdragosh'
+      timezone: 'America/New_York'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
     changes:
