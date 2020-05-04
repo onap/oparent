@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.onap.oparent</groupId>
     <artifactId>version</artifactId>
-    <version>3.0.2-SNAPSHOT</version>
+    <version>3.0.3-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
   <artifactId>oparent</artifactId>
@@ -279,7 +279,7 @@
       <dependency>
         <groupId>org.onap.oparent</groupId>
         <artifactId>dependencies</artifactId>
-        <version>3.0.2-SNAPSHOT</version>
+        <version>3.0.3-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -436,7 +436,7 @@
           <dependency>
             <groupId>org.onap.oparent</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>3.0.2-SNAPSHOT</version>
+            <version>3.0.3-SNAPSHOT</version>
           </dependency>
         </dependencies>
         <executions>
