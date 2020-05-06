@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.onap.oparent</groupId>
     <artifactId>version</artifactId>
-    <version>3.0.3-SNAPSHOT</version>
+    <version>3.0.2</version>
     <relativePath>..</relativePath>
   </parent>
   <artifactId>onap-license</artifactId>
