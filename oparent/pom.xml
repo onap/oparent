@@ -2,7 +2,7 @@
 <!--
    Copyright (c) 2016-2017 Huawei Technologies Co., Ltd.
    Modifications copyright (C) 2019 AT&T Intellectual Property
-   Modifications Copyright (C) 2019 Nordix Foundation.
+   Modifications Copyright (C) 2019-2020 Nordix Foundation.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -418,12 +418,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>8.27</version>
+              <version>8.32</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -457,7 +457,7 @@
               <excludes>
               </excludes>
               <consoleOutput>true</consoleOutput>
-              <failsOnViolation>false</failsOnViolation>
+              <failOnViolation>false</failOnViolation>
             </configuration>
           </execution>
           <execution>
@@ -481,7 +481,7 @@
               <excludes>
               </excludes>
               <consoleOutput>true</consoleOutput>
-              <failsOnViolation>false</failsOnViolation>
+              <failOnViolation>false</failOnViolation>
             </configuration>
           </execution>
         </executions>
