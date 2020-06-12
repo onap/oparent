@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2245ba02_3dcf9b3e",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2020-06-12T14:32:48Z",
+      "side": 1,
+      "message": "Version of checkstyle plugin has to be bumped to support the 8.32 checkstyle rule set.",
+      "range": {
+        "startLine": 421,
+        "startChar": 0,
+        "endLine": 421,
+        "endChar": 5
+      },
+      "revId": "da37f5c0f1b4539694e794f9b7924c389e0b0635",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be8ab23c_46e1d822",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2020-06-12T14:32:48Z",
+      "side": 1,
+      "message": "This is the version of the checkstyle rule set supported by the latest checkstyle plugin in Eclipse.",
+      "range": {
+        "startLine": 426,
+        "startChar": 0,
+        "endLine": 426,
+        "endChar": 5
+      },
+      "revId": "da37f5c0f1b4539694e794f9b7924c389e0b0635",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
