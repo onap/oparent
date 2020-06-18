@@ -39,6 +39,24 @@
       "revId": "40f72c17929a84514956f8178681ab0c87b95ca5",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "067f24cc_fe97a283",
+        "filename": "checkstyle/src/main/resources/onap-checkstyle/onap-java-style.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2020-06-18T09:41:01Z",
+      "side": 1,
+      "message": "Yes, there\u0027s a few subtle changes. Things like \"else\" and \"while\" on same line as }, and space after comma in method declaration and in templates.",
+      "parentUuid": "a560c563_ea742be1",
+      "revId": "40f72c17929a84514956f8178681ab0c87b95ca5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
