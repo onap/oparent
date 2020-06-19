@@ -22,6 +22,30 @@
       "revId": "f540d9eaadbdf1f5c190b5b9b955c6fea3d8831e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "902615c6_c431bdb0",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 484,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2020-06-19T08:17:41Z",
+      "side": 1,
+      "message": "Done, Missed this, didn\u0027t realise it was incorrect in oparent. Changed line 460 as well.",
+      "parentUuid": "c9f1bce1_086084bb",
+      "range": {
+        "startLine": 484,
+        "startChar": 14,
+        "endLine": 484,
+        "endChar": 56
+      },
+      "revId": "f540d9eaadbdf1f5c190b5b9b955c6fea3d8831e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
