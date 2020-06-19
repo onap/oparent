@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce89ef99_6717d3c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 943
+      },
+      "writtenOn": "2020-06-19T12:15:44Z",
+      "side": 1,
+      "message": "Thanks for doing the updates. I agree with the changes and have updated the recommendation tables for each project to incorporate these changes. For the H release we will create the recommendations closer to the start of the release.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 35
+      },
+      "revId": "a459dbadfc41f4d007ad04e5a69cbd7499d86ff7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
