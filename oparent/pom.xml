@@ -3,6 +3,7 @@
    Copyright (c) 2016-2017 Huawei Technologies Co., Ltd.
    Modifications copyright (C) 2019 AT&T Intellectual Property
    Modifications Copyright (C) 2019-2020 Nordix Foundation.
+   Modifications Copyright (C) 2020 Bell Canada.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,7 +22,7 @@
   <parent>
     <groupId>org.onap.oparent</groupId>
     <artifactId>version</artifactId>
-    <version>3.1.0-SNAPSHOT</version>
+    <version>3.1.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
   <artifactId>oparent</artifactId>
@@ -299,7 +300,7 @@
       <dependency>
         <groupId>org.onap.oparent</groupId>
         <artifactId>dependencies</artifactId>
-        <version>3.1.0-SNAPSHOT</version>
+        <version>3.1.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -456,7 +457,7 @@
           <dependency>
             <groupId>org.onap.oparent</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>3.1.0-SNAPSHOT</version>
+            <version>3.1.1-SNAPSHOT</version>
           </dependency>
         </dependencies>
         <executions>
