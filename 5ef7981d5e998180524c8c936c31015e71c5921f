@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+2: Pamela Dragosh <pdragosh@research.att.com>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-at: Tue, 26 Jan 2021 08:07:10 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/oparent/+/117110
+Project: oparent
+Branch: refs/heads/master
