@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ece344cd_a9b787a1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2021-06-25T14:58:29Z",
+      "side": 1,
+      "message": "I\u0027ll defer to Amy on this",
+      "revId": "5b3b0077d2f37d4c801c6b4399fceb2317f2a720",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
