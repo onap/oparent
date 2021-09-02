@@ -4,11 +4,11 @@ project_creation_date: '2017-02-10'
 lifecycle_state: 'Incubation'
 project_category: ''
 project_lead: &onap_oparent_ptl
-    name: 'Morgan Richomme'
-    email: 'morgan.richomme@orange.com'
-    id: 'mrichomme'
-    company: 'Orange'
-    timezone: 'Europe/Paris'
+    name: 'Michal Jagiello'
+    email: 'Michal.Jagiello@t-mobile.pl'
+    company: 'T-Mobile'
+    id: 'MichalJagielloTMPL'
+    timezone: 'Europe/Warsaw'
 primary_contact: *onap_oparent_ptl
 issue_tracking:
     type: 'jira'
