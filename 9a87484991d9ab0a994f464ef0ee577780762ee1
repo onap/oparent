@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2da74374_e79d1580",
+        "filename": "releases/3.2.1.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2021-10-11T12:47:36Z",
+      "side": 1,
+      "message": "Re-run the Istanbul job and use that job number.",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 36
+      },
+      "revId": "9a87484991d9ab0a994f464ef0ee577780762ee1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
