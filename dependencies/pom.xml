@@ -27,7 +27,7 @@
   <name>oparent/dependencies</name>
   <packaging>pom</packaging>
   <properties>
-    <spring.version>5.3.8</spring.version>
+    <spring.version>5.3.19</spring.version>
     <jetty.version>9.4.41.v20210516</jetty.version>
   </properties>
   <dependencyManagement>
