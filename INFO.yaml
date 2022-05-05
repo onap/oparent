@@ -56,6 +56,11 @@ committers:
       company: 'ATT'
       id: 'pdragosh'
       timezone: 'America/New_York'
+    - name: 'Fiachra Corcoran'
+      email: 'fiachra.corcoran@est.tech'
+      company: 'Ericsson'
+      id: 'efiacor'
+      timezone: 'Europe/Dublin'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
     changes:
