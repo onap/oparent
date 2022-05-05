@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6e2ac96_d0d50cbe",
+        "filename": "INFO.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2022-05-05T12:13:31Z",
+      "side": 1,
+      "message": "I would check to see if these folks should be removed, they have been inactive for quite a long while.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 0
+      },
+      "revId": "42167b6a730b61988aea52beeade54ad5c9206c4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0b69bfce_42f96e79",
+        "filename": "INFO.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2022-05-05T12:13:31Z",
+      "side": 1,
+      "message": "Could you update this to pd1248@att.com ? I didn\u0027t realize this was out-of-date. Thanks!",
+      "range": {
+        "startLine": 55,
+        "startChar": 14,
+        "endLine": 55,
+        "endChar": 40
+      },
+      "revId": "42167b6a730b61988aea52beeade54ad5c9206c4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
