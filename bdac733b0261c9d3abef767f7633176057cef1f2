@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a66210b1_84842142",
+        "filename": "dependencies/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2022-08-18T11:55:45Z",
+      "side": 1,
+      "message": "Could you possibly also upgrade this to 5.3.22 ?",
+      "revId": "bdac733b0261c9d3abef767f7633176057cef1f2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a35f6cc_cb604573",
+        "filename": "dependencies/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2022-08-18T11:55:45Z",
+      "side": 1,
+      "message": "And possibly this to 9.4.48.v20220622 ?",
+      "revId": "bdac733b0261c9d3abef767f7633176057cef1f2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
