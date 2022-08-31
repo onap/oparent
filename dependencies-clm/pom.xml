@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.onap.oparent</groupId>
     <artifactId>oparent</artifactId>
-    <version>3.3.2-SNAPSHOT</version>
+    <version>3.3.3-SNAPSHOT</version>
     <relativePath>../oparent</relativePath>
   </parent>
   <artifactId>dependencies-clm</artifactId>
