@@ -1,0 +1,4 @@
+distribution_type: 'maven'
+version: '3.3.3'
+project: 'oparent'
+log_dir: 'oparent-maven-stage-master/1398/'
