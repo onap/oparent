@@ -27,120 +27,129 @@
   <name>oparent/dependencies</name>
   <packaging>pom</packaging>
   <properties>
-    <spring.version>6.0.2</spring.version>
-    <jetty.version>9.4.48.v20220622</jetty.version>
+    <version.beanutils>1.9.4</version.beanutils>
+    <version.bootstrap>5.2.3</version.bootstrap>
+    <version.guava>31.1-jre</version.guava>
+    <version.httpclient>4.5.14</version.httpclient>
+    <version.jackson>2.14.1</version.jackson>
+    <version.jetty>11.0.12</version.jetty>
+    <version.jquery>3.6.1</version.jquery>
+    <version.logback>1.4.5</version.logback>
+    <version.spring>6.0.2</version.spring>
+    <version.tomcat>10.1.2</version.tomcat>
+    <version.xerces>2.9.1</version.xerces>
   </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>30.1.1-jre</version>
+        <version>${version.guava}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-http</artifactId>
-        <version>${jetty.version}</version>
+        <version>${version.jetty}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlet</artifactId>
-        <version>${jetty.version}</version>
+        <version>${version.jetty}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlets</artifactId>
-        <version>${jetty.version}</version>
+        <version>${version.jetty}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-server</artifactId>
-        <version>${jetty.version}</version>
+        <version>${version.jetty}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-security</artifactId>
-        <version>${jetty.version}</version>
+        <version>${version.jetty}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-expression</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webflux</artifactId>
-        <version>${spring.version}</version>
+        <version>${version.spring}</version>
       </dependency>
       <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
-        <version>1.9.4</version>
+        <version>${version.beanutils}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
         <artifactId>tomcat-embed-core</artifactId>
-        <version>9.0.65</version>
+        <version>${version.tomcat}</version>
       </dependency>
       <dependency>
         <groupId>org.webjars</groupId>
         <artifactId>bootstrap</artifactId>
-        <version>5.0.1</version>
+        <version>${version.bootstrap}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.12.3</version>
+        <version>${version.jackson}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.12.3</version>
+        <version>${version.jackson}</version>
       </dependency>
       <dependency>
         <groupId>org.webjars</groupId>
         <artifactId>jquery</artifactId>
-        <version>3.6.0</version>
+        <version>${version.jquery}</version>
       </dependency>
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
-        <version>1.2.10</version>
+        <version>${version.logback}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
-        <version>4.5.13</version>
+        <version>${version.httpclient}</version>
       </dependency>
       <dependency>
         <groupId>xerces</groupId>
         <artifactId>xercesImpl</artifactId>
-        <version>2.12.2</version>
+        <version>${version.xerces}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
