@@ -22,6 +22,30 @@
       "revId": "7aedd8a2820985d2054999cd5c6a4ea9bf497bfc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "974273db_cb24119f",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2022-12-13T13:12:34Z",
+      "side": 1,
+      "message": "Yeah - those are annoying. Not sure how the maven team can fix those situations.",
+      "parentUuid": "a4b7c4fb_83dff75f",
+      "range": {
+        "startLine": 305,
+        "startChar": 0,
+        "endLine": 305,
+        "endChar": 6
+      },
+      "revId": "7aedd8a2820985d2054999cd5c6a4ea9bf497bfc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
