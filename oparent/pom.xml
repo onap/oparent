@@ -36,7 +36,7 @@
     <url>https://wiki.onap.org/display/DW/Integration+Project</url>
   </scm>
   <properties>
-    <oparent.version>3.3.3-SNAPSHOT</oparent.version>
+    <oparent.version>3.3.3</oparent.version>
     <jacoco.version>0.8.5</jacoco.version>
     <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
     <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
@@ -302,7 +302,7 @@
       <dependency>
         <groupId>org.onap.oparent</groupId>
         <artifactId>dependencies</artifactId>
-        <version>${oparent.version}</version>
+        <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -459,7 +459,7 @@
           <dependency>
             <groupId>org.onap.oparent</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>${oparent.version}</version>
+            <version>${project.version}</version>
           </dependency>
         </dependencies>
         <executions>
