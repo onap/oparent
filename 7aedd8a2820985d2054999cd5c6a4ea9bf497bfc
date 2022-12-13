@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4b7c4fb_83dff75f",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-12-13T12:55:37Z",
+      "side": 1,
+      "message": "This is required because the \"project.version\" property becomes whatever the \"project.version\" property is set to in the inheriting pom.",
+      "range": {
+        "startLine": 305,
+        "startChar": 0,
+        "endLine": 305,
+        "endChar": 6
+      },
+      "revId": "7aedd8a2820985d2054999cd5c6a4ea9bf497bfc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
