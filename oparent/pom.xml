@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.onap.oparent</groupId>
     <artifactId>version</artifactId>
-    <!-- When changing, also change the oparent.version property -->
+    <!-- When changing, also change the property reference in the file below -->
     <version>3.3.3-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
@@ -36,7 +36,6 @@
     <url>https://wiki.onap.org/display/DW/Integration+Project</url>
   </scm>
   <properties>
-    <oparent.version>3.3.3</oparent.version>
     <jacoco.version>0.8.5</jacoco.version>
     <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
     <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
@@ -302,7 +301,7 @@
       <dependency>
         <groupId>org.onap.oparent</groupId>
         <artifactId>dependencies</artifactId>
-        <version>${project.version}</version>
+        <version>3.3.3-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -459,7 +458,7 @@
           <dependency>
             <groupId>org.onap.oparent</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>${project.version}</version>
+            <version>3.3.3-SNAPSHOT</version>
           </dependency>
         </dependencies>
         <executions>
