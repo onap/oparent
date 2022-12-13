@@ -46,6 +46,30 @@
       "revId": "7aedd8a2820985d2054999cd5c6a4ea9bf497bfc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c1f86f4d_5ba691b5",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-12-13T15:52:42Z",
+      "side": 1,
+      "message": "It took me quite some time to find this.",
+      "parentUuid": "974273db_cb24119f",
+      "range": {
+        "startLine": 305,
+        "startChar": 0,
+        "endLine": 305,
+        "endChar": 6
+      },
+      "revId": "7aedd8a2820985d2054999cd5c6a4ea9bf497bfc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
