@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fda6dc01_fbd88f50",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-12-13T21:43:20Z",
+      "side": 1,
+      "message": "When the POM is released I\u0027m not sure if this reference will be updated or not. If not, then this won\u0027t work.",
+      "range": {
+        "startLine": 304,
+        "startChar": 0,
+        "endLine": 304,
+        "endChar": 4
+      },
+      "revId": "bb64a6d45a84bc92eb4c71959272fd77d01b0684",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
