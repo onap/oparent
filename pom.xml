@@ -21,7 +21,7 @@
   <name>oparent</name>
   <groupId>org.onap.oparent</groupId>
   <artifactId>version</artifactId>
-  <version>3.3.3-SNAPSHOT</version>
+  <version>3.3.3</version>
   <packaging>pom</packaging>
   <modules>
     <!-- oparent tools -->
